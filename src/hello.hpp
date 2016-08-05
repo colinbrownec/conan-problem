@@ -1,6 +1,6 @@
-#ifndef PROJECT_A_H
-#define PROJECT_A_H
+#ifndef HELLO_H
+#define HELLO_H
 
 void hello();
 
-#endif // PROJECT_A_H
+#endif // HELLO_H
