@@ -25,7 +25,7 @@ class ConanProblemProject(ConanFile):
     ])
 
     self.run('mkdir build')
-    shutil.copy('conanbuildinfo.cmake', 'build')
+    #shutil.copy('conanbuildinfo.cmake', 'build')
     self.run('cd build && cmake %s %s ../conan-problem' % (cmake.command_line, args))
     self.run('cd build && cmake --build . --target install %s' % cmake.build_config)
 
