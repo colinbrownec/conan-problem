@@ -17,5 +17,5 @@ install(TARGETS conan-problem-project
         ARCHIVE DESTINATION lib)
 
 install(DIRECTORY src/
-        DESTINATION include
+        DESTINATION include/conan-problem-project
         FILES_MATCHING PATTERN "*.hpp")
