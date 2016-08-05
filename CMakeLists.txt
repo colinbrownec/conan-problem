@@ -4,11 +4,8 @@ cmake_minimum_required(VERSION 2.8)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-if (BUILD_SHARED_LIBS)
-  add_library(conan-problem-project SHARED src/hello.cpp)
-else()
-  add_library(conan-problem-project STATIC src/hello.cpp)
-endif()
+# Not necessary to specify if using BUILD_SHARED_LIBS
+add_library(conan-problem-project src/hello.cpp)
 
 #target_link_libraries(conan-problem-project ${CONAN_LIBS})
 
