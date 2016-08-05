@@ -25,9 +25,9 @@ class ConanProblemProject(ConanFile):
     ])
 
     self.run('mkdir build')
-    #shutil.copy('conanbuildinfo.cmake', 'build')
-    self.run('cd build && cmake %s %s ../conan-problem-project' % (cmake.command_line, args))
-    self.run('cd build && cmake --build --target install %s .' % cmake.build_config)
+    shutil.copy('conanbuildinfo.cmake', 'build')
+    self.run('cd build && cmake %s %s ../conan-problem' % (cmake.command_line, args))
+    self.run('cd build && cmake --build . --target install %s' % cmake.build_config)
 
   def package_info(self):
     self.cpp_info.libs = ['conan-problem-project']
