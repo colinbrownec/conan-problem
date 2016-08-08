@@ -19,10 +19,8 @@ class ConanProblemTestProject(ConanFile):
   def imports(self):
     if self.settings.os == 'Windows':
       self.copy(pattern='*.dll', dst='bin', src='bin')
-      self.copy(pattern='*.lib', dst='lib', src='lib')
     else:
       self.copy(pattern='*.so', dst='bin', src='bin')
-      self.copy(pattern='*.a', dst='lib', src='lib')
 
   def test(self):
     # equal to ./bin/greet, but portable win: .\bin\greet
